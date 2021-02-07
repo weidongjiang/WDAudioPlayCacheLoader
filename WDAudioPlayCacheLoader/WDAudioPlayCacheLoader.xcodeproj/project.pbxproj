@@ -17,6 +17,7 @@
 		4C575AB525CF8DA4002A117F /* WDAudioPlayCacheLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575AB425CF8DA4002A117F /* WDAudioPlayCacheLoaderTests.m */; };
 		4C575AC025CF8DA4002A117F /* WDAudioPlayCacheLoaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575ABF25CF8DA4002A117F /* WDAudioPlayCacheLoaderUITests.m */; };
 		4C575ADA25CFBF6F002A117F /* WDAudioPlayRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575AD925CFBF6F002A117F /* WDAudioPlayRequestTask.m */; };
+		4C575AE425CFC4E5002A117F /* WDAudioPlayCacheTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575AE325CFC4E5002A117F /* WDAudioPlayCacheTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		4C575AC125CF8DA4002A117F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C575AD825CFBF6F002A117F /* WDAudioPlayRequestTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDAudioPlayRequestTask.h; sourceTree = "<group>"; };
 		4C575AD925CFBF6F002A117F /* WDAudioPlayRequestTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDAudioPlayRequestTask.m; sourceTree = "<group>"; };
+		4C575AE225CFC4E5002A117F /* WDAudioPlayCacheTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDAudioPlayCacheTools.h; sourceTree = "<group>"; };
+		4C575AE325CFC4E5002A117F /* WDAudioPlayCacheTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDAudioPlayCacheTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		4C575A9725CF8DA1002A117F /* WDAudioPlayCacheLoader */ = {
 			isa = PBXGroup;
 			children = (
+				4C575AE125CFC4BC002A117F /* tools */,
 				4C575AD725CFBF3F002A117F /* loader */,
 				4C575A9825CF8DA1002A117F /* AppDelegate.h */,
 				4C575A9925CF8DA1002A117F /* AppDelegate.m */,
@@ -148,6 +152,15 @@
 				4C575AD925CFBF6F002A117F /* WDAudioPlayRequestTask.m */,
 			);
 			path = loader;
+			sourceTree = "<group>";
+		};
+		4C575AE125CFC4BC002A117F /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				4C575AE225CFC4E5002A117F /* WDAudioPlayCacheTools.h */,
+				4C575AE325CFC4E5002A117F /* WDAudioPlayCacheTools.m */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C575AE425CFC4E5002A117F /* WDAudioPlayCacheTools.m in Sources */,
 				4C575AA025CF8DA1002A117F /* ViewController.m in Sources */,
 				4C575A9A25CF8DA1002A117F /* AppDelegate.m in Sources */,
 				4C575ADA25CFBF6F002A117F /* WDAudioPlayRequestTask.m in Sources */,
