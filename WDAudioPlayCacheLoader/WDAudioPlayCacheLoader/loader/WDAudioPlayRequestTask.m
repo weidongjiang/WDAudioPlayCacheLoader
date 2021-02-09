@@ -51,7 +51,48 @@ static const CGFloat WDAudioPlayRequestTaskTimeout = 10.0;
 #pragma mark - NSURLSessionDataDelegate
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     NSLog(@"WDAudioPlayRequestTask response----%@",response);
+    if (self.isCancelled) {
+        return;
+    }
+    completionHandler(NSURLSessionResponseAllow);
     
+    NSHTTPURLResponse *_response = (NSHTTPURLResponse *)response;
+    NSDictionary *allHeaderFields = [_response allHeaderFields];
+//    {
+//        "Accept-Ranges" = bytes;
+//        "Access-Control-Allow-Origin" = "*";
+//        Connection = "keep-alive";
+//        "Content-Length" = 4571591;
+//        "Content-MD5" = "Rvx8CdxAr3FVf66wI2dVMw==";
+//        "Content-Type" = "video/mp4";
+//        Date = "Tue, 09 Feb 2021 10:05:15 GMT";
+//        Etag = "\"46fc7c09dc40af71557faeb023675533\"";
+//        Expires = "Fri, 12 Feb 2021 09:55:52 GMT";
+//        "Last-Modified" = "Tue, 28 Apr 2020 04:59:03 GMT";
+//        "Ohc-Cache-HIT" = "bj2bgpcache93 [3], czix93 [1]";
+//        "Ohc-File-Size" = 4571591;
+//        "Ohc-Response-Time" = "1 0 0 0 0 39";
+//        Server = "JSP3/2.0.14";
+//        "x-bce-content-crc32" = 1570434315;
+//        "x-bce-debug-id" = "Huhfp8Zre243zqGeZSLoeTJJ3dUcxbgphwQFlhjGxMlJT8fXAZS0X9WjeDY7phK9OJTX7YJR1on0vNpf8WFMbA==";
+//        "x-bce-request-id" = "c6a73e9a-d44f-40ac-b4ea-384bdb4c189a";
+//        "x-bce-storage-class" = COLD;
+//    }
+
+    NSString * contentRange = [allHeaderFields objectForKey:@"Content-Range"];
+    NSString * fileLength = [[contentRange componentsSeparatedByString:@"/"] lastObject];
+    NSString *_length = [allHeaderFields objectForKey:@"Content-Length"];
+    
+    NSString *length = nil;
+    if (fileLength > 0) {
+        length = fileLength;
+    }else if (_length > 0){
+        length = _length;
+    }
+    self.fileLength = length.integerValue > 0 ? length.integerValue : response.expectedContentLength;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(requestTaskDidReceiveResponse)]) {
+        [self.delegate requestTaskDidReceiveResponse];
+    }
     
 }
 
