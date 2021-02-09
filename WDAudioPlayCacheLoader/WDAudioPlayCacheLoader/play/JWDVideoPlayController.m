@@ -10,14 +10,15 @@
 #import <AVFoundation/AVFoundation.h>
 #import "JWDVideoPlayView.h"
 #import "AVAsset+JWDAdditions.h"
-
+#import "WDAudioPlayResourceLoader.h"
+#import "WDAudioPlayCacheTools.h"
 
 #define STATUS_KEYPATH @"status"
 #define REFRESH_INTERVAL 0.5f
 
 static const NSString *PlayerItemStatusContext;
 
-@interface JWDVideoPlayController ()<JWDTransportDelegate>
+@interface JWDVideoPlayController ()<JWDTransportDelegate,WDAudioPlayResourceLoaderDelegate>
 
 @property (nonatomic, strong) AVAsset *asset;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
@@ -29,29 +30,48 @@ static const NSString *PlayerItemStatusContext;
 @property (strong, nonatomic) id itemEndObserver;
 @property (assign, nonatomic) float lastPlaybackRate;
 
+@property (nonatomic, strong) WDAudioPlayResourceLoader *resourceLoader;
+
 @end
 
 @implementation JWDVideoPlayController
 - (instancetype)initWithUrl:(NSURL *)assetURL {
     self = [super init];
     if (self) {
-        self.asset = [AVAsset assetWithURL:assetURL];
-        [self prepareToPlay];
+        [self prepareToPlayUrl:assetURL];
     }
     return self;
 }
 
-- (void)prepareToPlay {
+- (void)prepareToPlayUrl:(NSURL *)assetURL {
     NSArray *keys = @[@"tracks",@"duration",@"commonMetadata",@"availableMediaCharacteristicsWithMediaSelectionOptions"];
     
-    self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset
-                           automaticallyLoadedAssetKeys:keys];
+    self.asset = [AVAsset assetWithURL:assetURL];
+
+    self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset automaticallyLoadedAssetKeys:keys];
+    
+    
+    if ([assetURL.absoluteString hasPrefix:@"http"]) {
+        NSString *cacheFilePath = nil;
+        if (cacheFilePath) {//本地缓存
+            
+        }else {// 网路加载
+            self.resourceLoader = [[WDAudioPlayResourceLoader alloc] init];
+            self.resourceLoader.delegate = self;
+            
+            AVURLAsset *urlasset = [AVURLAsset URLAssetWithURL:[WDAudioPlayCacheTools customSchemeURL:assetURL] options:nil];
+            [urlasset.resourceLoader setDelegate:self.resourceLoader queue:dispatch_get_main_queue()];
+            
+            self.playerItem = [AVPlayerItem playerItemWithAsset:urlasset automaticallyLoadedAssetKeys:keys];
+        }
+    }else {
+        self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset automaticallyLoadedAssetKeys:keys];
+    }
     
     [self.playerItem addObserver:self
                       forKeyPath:STATUS_KEYPATH
                          options:0
                          context:&PlayerItemStatusContext];
-    
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
     
     self.playerView = [[JWDVideoPlayView alloc] initWithPlayer:self.player];
@@ -191,5 +211,15 @@ static const NSString *PlayerItemStatusContext;
         self.itemEndObserver = nil;
     }
 }
+
+
+#pragma WDAudioPlayResourceLoaderDelegate
+- (void)loader:(WDAudioPlayResourceLoader *)loader cacheProgress:(CGFloat)progress {
+    
+}
+- (void)loader:(WDAudioPlayResourceLoader *)loader failLoadingWithError:(NSError *)error {
+    
+}
+
 
 @end

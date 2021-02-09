@@ -54,8 +54,10 @@
 }
 
 - (void)playRemoteButton {
-    
-    NSURL *url = [NSURL URLWithString:@"https://cdn.console.pipacoding.com/einstein/material/230cb46b-028a-4989-a68e-a51b574a19b230000553.mp4"];
+
+    NSURL *url = [NSURL URLWithString:@"https://vd3.bdstatic.com/mda-kasn2n0yp3mprygt/mda-kasn2n0yp3mprygt.mp4"];
+
+//    NSURL *url = [NSURL URLWithString:@"http://cdn.console.pipacoding.com/einstein/material/230cb46b-028a-4989-a68e-a51b574a19b230000553.mp4"];
     self.playController = [[JWDVideoPlayController alloc] initWithUrl:url];
     
     [self.view addSubview:self.playController.view];
