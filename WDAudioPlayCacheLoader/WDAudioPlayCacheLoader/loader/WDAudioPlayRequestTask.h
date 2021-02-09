@@ -29,8 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger requestOffset;// 请求起始位置
 @property (nonatomic, assign) NSInteger fileLength;// 文件长度
 @property (nonatomic, assign) NSInteger cacheLength;// 缓冲长度
-@property (nonatomic, assign) BOOL isCache;// 是否缓存文件
-@property (nonatomic, assign) BOOL isCancel;// 是否取消请求
+@property (nonatomic, assign, getter=isCache) BOOL cache;// 是否缓存文件
+@property (nonatomic, assign, getter=isCancelled) BOOL cancel;// 是否取消请求
 
 /// 开始请求
 - (void)requestStart;

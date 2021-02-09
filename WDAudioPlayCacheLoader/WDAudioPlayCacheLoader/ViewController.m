@@ -6,8 +6,11 @@
 //
 
 #import "ViewController.h"
+#import "WDAudioPlayRequestTask.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) WDAudioPlayRequestTask *task;
 
 @end
 
@@ -16,6 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    self.task = [[WDAudioPlayRequestTask alloc] init];
+//    self.task.requestUrl = @"";
+//    self.task.requestOffset = 0.0;
+//    self.task.cacheLength = 1000;
+//    [self.task requestStart];
+    
+    
 }
 
 

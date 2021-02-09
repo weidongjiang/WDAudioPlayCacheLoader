@@ -23,7 +23,7 @@ static const CGFloat WDAudioPlayRequestTaskTimeout = 10.0;
 @implementation WDAudioPlayRequestTask
 - (instancetype)init {
     if (self = [super init]) {
-        [WDAudioPlayCacheTools tempFilePathFileName:@"MusicTemp.mp4"];
+        [WDAudioPlayCacheTools tempFilePathFileName:fileName];
     }
     return self;
 }
@@ -42,14 +42,27 @@ static const CGFloat WDAudioPlayRequestTaskTimeout = 10.0;
     [self.task resume];
 }
 
-- (void)setIsCancel:(BOOL)isCancel {
-    _isCancel = isCancel;
+- (void)setCancel:(BOOL)cancel {
+    _cancel = cancel;
     [self.task cancel];
     [self.session invalidateAndCancel];
 }
 
+#pragma mark - NSURLSessionDataDelegate
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    NSLog(@"WDAudioPlayRequestTask response----%@",response);
+    
+    
+}
 
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    NSLog(@"WDAudioPlayRequestTask data----%@",data);
 
+}
 
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    NSLog(@"WDAudioPlayRequestTask error----%@",error);
+
+}
 
 @end
