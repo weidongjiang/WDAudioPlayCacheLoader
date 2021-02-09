@@ -98,12 +98,37 @@ static const CGFloat WDAudioPlayRequestTaskTimeout = 10.0;
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     NSLog(@"WDAudioPlayRequestTask data----%@",data);
+    if (self.isCancelled) {
+        return;
+    }
+    [WDAudioPlayCacheTools writeTempFileData:data];
 
+    self.cacheLength += data.length;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(requestTaskDidUpdateCache)]) {
+        [self.delegate requestTaskDidUpdateCache];
+    }
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     NSLog(@"WDAudioPlayRequestTask error----%@",error);
-
+    if (self.isCancelled) {
+        return;
+    }
+    if (error) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(requestTaskDidFailWithError:)]) {
+            [self.delegate requestTaskDidFailWithError:error];
+        }
+        return;
+    }
+    
+    if (self.cache) {
+        [WDAudioPlayCacheTools cacheTempFileWithFileName:[WDAudioPlayCacheTools fileNameWithURL:self.requestUrl]];
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(requestTaskDidFinishLoadingWithCache:)]) {
+        [self.delegate requestTaskDidFinishLoadingWithCache:self.cache];
+    }
+    
 }
 
 @end
