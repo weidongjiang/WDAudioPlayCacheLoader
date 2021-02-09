@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -128,17 +128,17 @@
 			isa = PBXGroup;
 			children = (
 				4C57004A25D2805000AFC5B8 /* JWDTransport.h */,
-				4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */,
-				4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */,
-				4C57004D25D2805000AFC5B8 /* JWDVideoPlayController.h */,
-				4C57004E25D2805000AFC5B8 /* AVAsset+JWDAdditions.h */,
-				4C57004F25D2805000AFC5B8 /* JWDVideoHomeViewController.h */,
-				4C57005025D2805000AFC5B8 /* JWDVideoPlayView.h */,
 				4C57005125D2805000AFC5B8 /* NSTimer+Additions.h */,
-				4C57005225D2805000AFC5B8 /* JWDOverlayView.h */,
-				4C57005325D2805000AFC5B8 /* JWDVideoPlayView.m */,
-				4C57005425D2805000AFC5B8 /* JWDVideoHomeViewController.m */,
+				4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */,
+				4C57004E25D2805000AFC5B8 /* AVAsset+JWDAdditions.h */,
 				4C57005525D2805000AFC5B8 /* AVAsset+JWDAdditions.m */,
+				4C57004F25D2805000AFC5B8 /* JWDVideoHomeViewController.h */,
+				4C57005425D2805000AFC5B8 /* JWDVideoHomeViewController.m */,
+				4C57005225D2805000AFC5B8 /* JWDOverlayView.h */,
+				4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */,
+				4C57005025D2805000AFC5B8 /* JWDVideoPlayView.h */,
+				4C57005325D2805000AFC5B8 /* JWDVideoPlayView.m */,
+				4C57004D25D2805000AFC5B8 /* JWDVideoPlayController.h */,
 				4C57005625D2805000AFC5B8 /* JWDVideoPlayController.m */,
 			);
 			path = play;
@@ -235,7 +235,6 @@
 				27EBEF5AFD04008D6931384F /* Pods-WDAudioPlayCacheLoaderTests.debug.xcconfig */,
 				37C41F7766598906A8F7CE51 /* Pods-WDAudioPlayCacheLoaderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
