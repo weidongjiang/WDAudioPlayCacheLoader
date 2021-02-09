@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C57005725D2805000AFC5B8 /* NSTimer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */; };
+		4C57005825D2805000AFC5B8 /* JWDOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */; };
+		4C57005925D2805000AFC5B8 /* JWDVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57005325D2805000AFC5B8 /* JWDVideoPlayView.m */; };
+		4C57005A25D2805000AFC5B8 /* JWDVideoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57005425D2805000AFC5B8 /* JWDVideoHomeViewController.m */; };
+		4C57005B25D2805000AFC5B8 /* AVAsset+JWDAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57005525D2805000AFC5B8 /* AVAsset+JWDAdditions.m */; };
+		4C57005C25D2805000AFC5B8 /* JWDVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57005625D2805000AFC5B8 /* JWDVideoPlayController.m */; };
 		4C575A9A25CF8DA1002A117F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575A9925CF8DA1002A117F /* AppDelegate.m */; };
 		4C575A9D25CF8DA1002A117F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575A9C25CF8DA1002A117F /* SceneDelegate.m */; };
 		4C575AA025CF8DA1002A117F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575A9F25CF8DA1002A117F /* ViewController.m */; };
@@ -39,6 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C57004A25D2805000AFC5B8 /* JWDTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDTransport.h; sourceTree = "<group>"; };
+		4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Additions.m"; sourceTree = "<group>"; };
+		4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDOverlayView.m; sourceTree = "<group>"; };
+		4C57004D25D2805000AFC5B8 /* JWDVideoPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDVideoPlayController.h; sourceTree = "<group>"; };
+		4C57004E25D2805000AFC5B8 /* AVAsset+JWDAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAsset+JWDAdditions.h"; sourceTree = "<group>"; };
+		4C57004F25D2805000AFC5B8 /* JWDVideoHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDVideoHomeViewController.h; sourceTree = "<group>"; };
+		4C57005025D2805000AFC5B8 /* JWDVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDVideoPlayView.h; sourceTree = "<group>"; };
+		4C57005125D2805000AFC5B8 /* NSTimer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Additions.h"; sourceTree = "<group>"; };
+		4C57005225D2805000AFC5B8 /* JWDOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDOverlayView.h; sourceTree = "<group>"; };
+		4C57005325D2805000AFC5B8 /* JWDVideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDVideoPlayView.m; sourceTree = "<group>"; };
+		4C57005425D2805000AFC5B8 /* JWDVideoHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDVideoHomeViewController.m; sourceTree = "<group>"; };
+		4C57005525D2805000AFC5B8 /* AVAsset+JWDAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAsset+JWDAdditions.m"; sourceTree = "<group>"; };
+		4C57005625D2805000AFC5B8 /* JWDVideoPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDVideoPlayController.m; sourceTree = "<group>"; };
 		4C575A9525CF8DA1002A117F /* WDAudioPlayCacheLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDAudioPlayCacheLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C575A9825CF8DA1002A117F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C575A9925CF8DA1002A117F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +109,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C57004925D2805000AFC5B8 /* play */ = {
+			isa = PBXGroup;
+			children = (
+				4C57004A25D2805000AFC5B8 /* JWDTransport.h */,
+				4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */,
+				4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */,
+				4C57004D25D2805000AFC5B8 /* JWDVideoPlayController.h */,
+				4C57004E25D2805000AFC5B8 /* AVAsset+JWDAdditions.h */,
+				4C57004F25D2805000AFC5B8 /* JWDVideoHomeViewController.h */,
+				4C57005025D2805000AFC5B8 /* JWDVideoPlayView.h */,
+				4C57005125D2805000AFC5B8 /* NSTimer+Additions.h */,
+				4C57005225D2805000AFC5B8 /* JWDOverlayView.h */,
+				4C57005325D2805000AFC5B8 /* JWDVideoPlayView.m */,
+				4C57005425D2805000AFC5B8 /* JWDVideoHomeViewController.m */,
+				4C57005525D2805000AFC5B8 /* AVAsset+JWDAdditions.m */,
+				4C57005625D2805000AFC5B8 /* JWDVideoPlayController.m */,
+			);
+			path = play;
+			sourceTree = "<group>";
+		};
 		4C575A8C25CF8DA1002A117F = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +152,7 @@
 		4C575A9725CF8DA1002A117F /* WDAudioPlayCacheLoader */ = {
 			isa = PBXGroup;
 			children = (
+				4C57004925D2805000AFC5B8 /* play */,
 				4C575AE125CFC4BC002A117F /* tools */,
 				4C575AD725CFBF3F002A117F /* loader */,
 				4C575A9825CF8DA1002A117F /* AppDelegate.h */,
@@ -298,11 +338,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C575AE425CFC4E5002A117F /* WDAudioPlayCacheTools.m in Sources */,
+				4C57005A25D2805000AFC5B8 /* JWDVideoHomeViewController.m in Sources */,
 				4C57FFDF25D2375A00AFC5B8 /* WDAudioPlayResourceLoader.m in Sources */,
+				4C57005C25D2805000AFC5B8 /* JWDVideoPlayController.m in Sources */,
+				4C57005B25D2805000AFC5B8 /* AVAsset+JWDAdditions.m in Sources */,
+				4C57005725D2805000AFC5B8 /* NSTimer+Additions.m in Sources */,
 				4C575AA025CF8DA1002A117F /* ViewController.m in Sources */,
+				4C57005825D2805000AFC5B8 /* JWDOverlayView.m in Sources */,
 				4C575A9A25CF8DA1002A117F /* AppDelegate.m in Sources */,
 				4C575ADA25CFBF6F002A117F /* WDAudioPlayRequestTask.m in Sources */,
 				4C575AAB25CF8DA3002A117F /* main.m in Sources */,
+				4C57005925D2805000AFC5B8 /* JWDVideoPlayView.m in Sources */,
 				4C575A9D25CF8DA1002A117F /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +524,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZPP94SLYH;
 				INFOPLIST_FILE = WDAudioPlayCacheLoader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,6 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZPP94SLYH;
 				INFOPLIST_FILE = WDAudioPlayCacheLoader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
