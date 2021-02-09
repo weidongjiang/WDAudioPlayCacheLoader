@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests : NSObject
+@end
+@implementation PodsDummy_Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests
+@end

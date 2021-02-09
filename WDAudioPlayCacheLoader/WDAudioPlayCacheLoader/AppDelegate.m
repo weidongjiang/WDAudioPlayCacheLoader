@@ -6,8 +6,10 @@
 //
 
 #import "AppDelegate.h"
+#import "JWDVideoHomeViewController.h"
 
 @interface AppDelegate ()
+
 
 @end
 
@@ -16,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    JWDVideoHomeViewController *vc = [[JWDVideoHomeViewController alloc] init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0191BE87961C33AA24713AA9 /* Pods_WDAudioPlayCacheLoaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4138DBFE2B1A4741A70DFBB7 /* Pods_WDAudioPlayCacheLoaderTests.framework */; };
 		4C57005725D2805000AFC5B8 /* NSTimer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */; };
 		4C57005825D2805000AFC5B8 /* JWDOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */; };
 		4C57005925D2805000AFC5B8 /* JWDVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57005325D2805000AFC5B8 /* JWDVideoPlayView.m */; };
@@ -25,6 +26,8 @@
 		4C575ADA25CFBF6F002A117F /* WDAudioPlayRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575AD925CFBF6F002A117F /* WDAudioPlayRequestTask.m */; };
 		4C575AE425CFC4E5002A117F /* WDAudioPlayCacheTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C575AE325CFC4E5002A117F /* WDAudioPlayCacheTools.m */; };
 		4C57FFDF25D2375A00AFC5B8 /* WDAudioPlayResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57FFDE25D2375A00AFC5B8 /* WDAudioPlayResourceLoader.m */; };
+		81C68F502ABE296F2957A29D /* Pods_WDAudioPlayCacheLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4077209321F58BEB204EC1CC /* Pods_WDAudioPlayCacheLoader.framework */; };
+		BBBB4FC4DFE46BC28511278B /* Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A7C643B7869E41A2270F26 /* Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27EBEF5AFD04008D6931384F /* Pods-WDAudioPlayCacheLoaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDAudioPlayCacheLoaderTests.debug.xcconfig"; path = "Target Support Files/Pods-WDAudioPlayCacheLoaderTests/Pods-WDAudioPlayCacheLoaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B80154FE4A7E710890FB9FB /* Pods-WDAudioPlayCacheLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDAudioPlayCacheLoader.release.xcconfig"; path = "Target Support Files/Pods-WDAudioPlayCacheLoader/Pods-WDAudioPlayCacheLoader.release.xcconfig"; sourceTree = "<group>"; };
+		37C41F7766598906A8F7CE51 /* Pods-WDAudioPlayCacheLoaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDAudioPlayCacheLoaderTests.release.xcconfig"; path = "Target Support Files/Pods-WDAudioPlayCacheLoaderTests/Pods-WDAudioPlayCacheLoaderTests.release.xcconfig"; sourceTree = "<group>"; };
+		4077209321F58BEB204EC1CC /* Pods_WDAudioPlayCacheLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDAudioPlayCacheLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4138DBFE2B1A4741A70DFBB7 /* Pods_WDAudioPlayCacheLoaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDAudioPlayCacheLoaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C57004A25D2805000AFC5B8 /* JWDTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWDTransport.h; sourceTree = "<group>"; };
 		4C57004B25D2805000AFC5B8 /* NSTimer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Additions.m"; sourceTree = "<group>"; };
 		4C57004C25D2805000AFC5B8 /* JWDOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWDOverlayView.m; sourceTree = "<group>"; };
@@ -82,6 +90,10 @@
 		4C575AE325CFC4E5002A117F /* WDAudioPlayCacheTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDAudioPlayCacheTools.m; sourceTree = "<group>"; };
 		4C57FFDD25D2375A00AFC5B8 /* WDAudioPlayResourceLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDAudioPlayResourceLoader.h; sourceTree = "<group>"; };
 		4C57FFDE25D2375A00AFC5B8 /* WDAudioPlayResourceLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDAudioPlayResourceLoader.m; sourceTree = "<group>"; };
+		7DBA91981C80752B503F78FD /* Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.debug.xcconfig"; path = "Target Support Files/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3A7C643B7869E41A2270F26 /* Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E794300CD4C9AA8DAB70203D /* Pods-WDAudioPlayCacheLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDAudioPlayCacheLoader.debug.xcconfig"; path = "Target Support Files/Pods-WDAudioPlayCacheLoader/Pods-WDAudioPlayCacheLoader.debug.xcconfig"; sourceTree = "<group>"; };
+		EFE7E9CA221189ED5A0372E4 /* Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.release.xcconfig"; path = "Target Support Files/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C68F502ABE296F2957A29D /* Pods_WDAudioPlayCacheLoader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0191BE87961C33AA24713AA9 /* Pods_WDAudioPlayCacheLoaderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBB4FC4DFE46BC28511278B /* Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +151,8 @@
 				4C575AB325CF8DA4002A117F /* WDAudioPlayCacheLoaderTests */,
 				4C575ABE25CF8DA4002A117F /* WDAudioPlayCacheLoaderUITests */,
 				4C575A9625CF8DA1002A117F /* Products */,
+				9AD1B674508819C365D6F2D5 /* Pods */,
+				B95D2E5E3A71BC56DB097541 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +225,30 @@
 			path = tools;
 			sourceTree = "<group>";
 		};
+		9AD1B674508819C365D6F2D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E794300CD4C9AA8DAB70203D /* Pods-WDAudioPlayCacheLoader.debug.xcconfig */,
+				2B80154FE4A7E710890FB9FB /* Pods-WDAudioPlayCacheLoader.release.xcconfig */,
+				7DBA91981C80752B503F78FD /* Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.debug.xcconfig */,
+				EFE7E9CA221189ED5A0372E4 /* Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.release.xcconfig */,
+				27EBEF5AFD04008D6931384F /* Pods-WDAudioPlayCacheLoaderTests.debug.xcconfig */,
+				37C41F7766598906A8F7CE51 /* Pods-WDAudioPlayCacheLoaderTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B95D2E5E3A71BC56DB097541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4077209321F58BEB204EC1CC /* Pods_WDAudioPlayCacheLoader.framework */,
+				D3A7C643B7869E41A2270F26 /* Pods_WDAudioPlayCacheLoader_WDAudioPlayCacheLoaderUITests.framework */,
+				4138DBFE2B1A4741A70DFBB7 /* Pods_WDAudioPlayCacheLoaderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C575AC425CF8DA4002A117F /* Build configuration list for PBXNativeTarget "WDAudioPlayCacheLoader" */;
 			buildPhases = (
+				1E080CC22BB2D67B09E51BA3 /* [CP] Check Pods Manifest.lock */,
 				4C575A9125CF8DA1002A117F /* Sources */,
 				4C575A9225CF8DA1002A117F /* Frameworks */,
 				4C575A9325CF8DA1002A117F /* Resources */,
+				E7D4F1CE5743A68AD1F63293 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C575AC725CF8DA4002A117F /* Build configuration list for PBXNativeTarget "WDAudioPlayCacheLoaderTests" */;
 			buildPhases = (
+				49BDE386F0D58488B0D27804 /* [CP] Check Pods Manifest.lock */,
 				4C575AAC25CF8DA4002A117F /* Sources */,
 				4C575AAD25CF8DA4002A117F /* Frameworks */,
 				4C575AAE25CF8DA4002A117F /* Resources */,
@@ -250,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C575ACA25CF8DA4002A117F /* Build configuration list for PBXNativeTarget "WDAudioPlayCacheLoaderUITests" */;
 			buildPhases = (
+				8F832E782B8C1D54CA01D160 /* [CP] Check Pods Manifest.lock */,
 				4C575AB725CF8DA4002A117F /* Sources */,
 				4C575AB825CF8DA4002A117F /* Frameworks */,
 				4C575AB925CF8DA4002A117F /* Resources */,
+				CA41704DD857D317C55F0D48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +377,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E080CC22BB2D67B09E51BA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WDAudioPlayCacheLoader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49BDE386F0D58488B0D27804 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WDAudioPlayCacheLoaderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F832E782B8C1D54CA01D160 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA41704DD857D317C55F0D48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests/Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D4F1CE5743A68AD1F63293 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WDAudioPlayCacheLoader/Pods-WDAudioPlayCacheLoader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WDAudioPlayCacheLoader/Pods-WDAudioPlayCacheLoader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WDAudioPlayCacheLoader/Pods-WDAudioPlayCacheLoader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C575A9125CF8DA1002A117F /* Sources */ = {
@@ -518,6 +667,7 @@
 		};
 		4C575AC525CF8DA4002A117F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E794300CD4C9AA8DAB70203D /* Pods-WDAudioPlayCacheLoader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -537,6 +687,7 @@
 		};
 		4C575AC625CF8DA4002A117F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B80154FE4A7E710890FB9FB /* Pods-WDAudioPlayCacheLoader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -556,6 +707,7 @@
 		};
 		4C575AC825CF8DA4002A117F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EBEF5AFD04008D6931384F /* Pods-WDAudioPlayCacheLoaderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +728,7 @@
 		};
 		4C575AC925CF8DA4002A117F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C41F7766598906A8F7CE51 /* Pods-WDAudioPlayCacheLoaderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -596,6 +749,7 @@
 		};
 		4C575ACB25CF8DA4002A117F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DBA91981C80752B503F78FD /* Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZPP94SLYH;
@@ -614,6 +768,7 @@
 		};
 		4C575ACC25CF8DA4002A117F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE7E9CA221189ED5A0372E4 /* Pods-WDAudioPlayCacheLoader-WDAudioPlayCacheLoaderUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZPP94SLYH;
