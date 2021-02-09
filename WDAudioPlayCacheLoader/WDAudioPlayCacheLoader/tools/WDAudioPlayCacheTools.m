@@ -84,6 +84,7 @@
         [manager createDirectoryAtPath:cacheFolderPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     NSString * cacheFilePath = [NSString stringWithFormat:@"%@/%@", cacheFolderPath, name];
+    
     BOOL success = [[NSFileManager defaultManager] copyItemAtPath:[WDAudioPlayCacheTools tempFilePathFileName:fileName] toPath:cacheFilePath error:nil];
     NSLog(@"cache file : %@", success ? @"success" : @"fail");
 }
