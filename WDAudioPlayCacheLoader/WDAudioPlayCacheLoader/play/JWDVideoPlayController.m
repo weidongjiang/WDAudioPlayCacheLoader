@@ -58,8 +58,8 @@ static const NSString *PlayerItemStatusContext;
         }else {// 网路加载
             self.resourceLoader = [[WDAudioPlayResourceLoader alloc] init];
             self.resourceLoader.delegate = self;
-            
-            AVURLAsset *urlasset = [AVURLAsset URLAssetWithURL:[WDAudioPlayCacheTools customSchemeURL:assetURL] options:nil];
+//            NSURL *url = [WDAudioPlayCacheTools customSchemeURL:assetURL];
+            AVURLAsset *urlasset = [AVURLAsset URLAssetWithURL:assetURL options:nil];
             [urlasset.resourceLoader setDelegate:self.resourceLoader queue:dispatch_get_main_queue()];
             
             self.playerItem = [AVPlayerItem playerItemWithAsset:urlasset automaticallyLoadedAssetKeys:keys];

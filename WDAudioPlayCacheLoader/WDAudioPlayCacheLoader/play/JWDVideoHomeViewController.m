@@ -44,6 +44,9 @@
 - (void)playLocalButton {
 
     NSString *localURL = [[NSBundle mainBundle] pathForResource:@"hubblecast" ofType:@"m4v" inDirectory:@"Res"];
+    if (!localURL) {
+        return;
+    }
     self.playController = [[JWDVideoPlayController alloc] initWithUrl:[NSURL fileURLWithPath:localURL]];
     
     [self.view addSubview:self.playController.view];
