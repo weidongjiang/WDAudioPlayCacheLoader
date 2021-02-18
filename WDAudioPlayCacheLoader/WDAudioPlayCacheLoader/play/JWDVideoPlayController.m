@@ -52,16 +52,19 @@ static const NSString *PlayerItemStatusContext;
     
     
     if ([assetURL.absoluteString hasPrefix:@"http"]) {
-        NSString *cacheFilePath = nil;
+        NSString * cacheFilePath = [self cacheFileExistsWithURL:assetURL];
         if (cacheFilePath) {//本地缓存
-            
+            NSLog(@"cacheFilePath---%@",cacheFilePath);
+            NSURL * url = [NSURL fileURLWithPath:cacheFilePath];
+            self.playerItem = [AVPlayerItem playerItemWithURL:url];
         }else {// 网路加载
             self.resourceLoader = [[WDAudioPlayResourceLoader alloc] init];
             self.resourceLoader.delegate = self;
-//            NSURL *url = [WDAudioPlayCacheTools customSchemeURL:assetURL];
-            AVURLAsset *urlasset = [AVURLAsset URLAssetWithURL:assetURL options:nil];
+            NSURL *url = [WDAudioPlayCacheTools customSchemeURL:assetURL];
+            AVURLAsset *urlasset = [AVURLAsset URLAssetWithURL:url options:nil];
             [urlasset.resourceLoader setDelegate:self.resourceLoader queue:dispatch_get_main_queue()];
             
+//            self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset automaticallyLoadedAssetKeys:keys];
             self.playerItem = [AVPlayerItem playerItemWithAsset:urlasset automaticallyLoadedAssetKeys:keys];
         }
     }else {
@@ -80,6 +83,14 @@ static const NSString *PlayerItemStatusContext;
     
 }
 
+- (NSString *)cacheFileExistsWithURL:(NSURL *)url {
+    NSString * cacheFilePath = [NSString stringWithFormat:@"%@/%@", [WDAudioPlayCacheTools cacheFolderPath], [WDAudioPlayCacheTools fileNameWithURL:url]];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:cacheFilePath]) {
+        return cacheFilePath;
+    }
+    return nil;
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
                         change:(NSDictionary<NSKeyValueChangeKey,id> *)change
@@ -87,6 +98,7 @@ static const NSString *PlayerItemStatusContext;
     if (context == &PlayerItemStatusContext) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.playerItem removeObserver:self forKeyPath:STATUS_KEYPATH];
+            
             if (self.playerItem.status == AVPlayerItemStatusReadyToPlay) {
                 
                 [self addPlayerItemTimeObserver];
@@ -103,7 +115,7 @@ static const NSString *PlayerItemStatusContext;
                 [self generateThumbnails];
                 
             }else {
-                NSLog(@"Failed to load video");
+                NSLog(@"Failed to load video error %@",self.playerItem.error);
             }
         });
     }
