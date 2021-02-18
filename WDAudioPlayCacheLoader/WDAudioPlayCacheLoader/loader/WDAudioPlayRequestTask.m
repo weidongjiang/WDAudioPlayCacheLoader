@@ -146,13 +146,20 @@ static const CGFloat WDAudioPlayRequestTaskTimeout = 10.0;
 
 - (void)writeTempFileData:(NSData *)data path:(NSString *)path {
     
-    NSFileManager *manager = [NSFileManager defaultManager];
-    if(![manager fileExistsAtPath:path]){
-       //参数1：文件路径
-       //参数2：初始化的内容
-       //参数3：附加信息,一般置为nil
-       [manager createFileAtPath:path contents:data attributes:nil];
-    }
+//    NSFileManager *manager = [NSFileManager defaultManager];
+//    if(![manager fileExistsAtPath:path]){
+//       //参数1：文件路径
+//       //参数2：初始化的内容
+//       //参数3：附加信息,一般置为nil
+//       [manager createFileAtPath:path contents:data attributes:nil];
+//    }else {
+//        manager isWritableFileAtPath
+//    }
+    
+    NSFileHandle * handle = [NSFileHandle fileHandleForWritingAtPath:path];
+    [handle writeData:data];
+    unsigned long long ret = [handle seekToEndOfFile];//返回文件大小
+    NSLog(@"writeTempFileData------%ll",ret);
 }
 
 

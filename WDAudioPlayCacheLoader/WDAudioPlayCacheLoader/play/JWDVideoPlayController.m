@@ -52,7 +52,7 @@ static const NSString *PlayerItemStatusContext;
     
     
     if ([assetURL.absoluteString hasPrefix:@"http"]) {
-        NSString * cacheFilePath = [self cacheFileExistsWithURL:assetURL];
+        NSString * cacheFilePath = nil;//[self cacheFileExistsWithURL:assetURL];
         if (cacheFilePath) {//本地缓存
             NSLog(@"cacheFilePath---%@",cacheFilePath);
             NSURL * url = [NSURL fileURLWithPath:cacheFilePath];
@@ -64,7 +64,6 @@ static const NSString *PlayerItemStatusContext;
             AVURLAsset *urlasset = [AVURLAsset URLAssetWithURL:url options:nil];
             [urlasset.resourceLoader setDelegate:self.resourceLoader queue:dispatch_get_main_queue()];
             
-//            self.playerItem = [AVPlayerItem playerItemWithAsset:self.asset automaticallyLoadedAssetKeys:keys];
             self.playerItem = [AVPlayerItem playerItemWithAsset:urlasset automaticallyLoadedAssetKeys:keys];
         }
     }else {
