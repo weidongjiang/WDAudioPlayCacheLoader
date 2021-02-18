@@ -159,7 +159,7 @@ static const CGFloat WDAudioPlayRequestTaskTimeout = 10.0;
 - (void)cacheTempFileWithFileName:(NSString *)name path:(NSString *)path {
     NSFileManager * manager = [NSFileManager defaultManager];
     NSString * cacheFolderPath = [self cacheFolderPath];
-    if (![manager fileExistsAtPath:cacheFolderPath]) {
+    if ([manager fileExistsAtPath:cacheFolderPath]) {
         [manager createDirectoryAtPath:cacheFolderPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     NSString * cacheFilePath = [NSString stringWithFormat:@"%@/%@", cacheFolderPath, name];

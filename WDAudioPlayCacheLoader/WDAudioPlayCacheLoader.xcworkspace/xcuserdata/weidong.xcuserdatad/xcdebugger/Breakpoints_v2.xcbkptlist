@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A8CD5C65-3A59-497B-A62F-6962F8C96D3A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WDAudioPlayCacheLoader/loader/WDAudioPlayRequestTask.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "-URLSession:task:didCompleteWithError:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "152E8312-2CD1-43E1-9B47-12B41399B341"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -55,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D7C3637A-F2B7-4641-8B7A-B91602AF0340"
+            uuid = "6F6A43F7-75FF-4D3A-9227-5B6643FF1756"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WDAudioPlayCacheLoader/play/JWDVideoPlayController.m"
+            filePath = "WDAudioPlayCacheLoader/loader/WDAudioPlayRequestTask.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-prepareToPlayUrl:"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-copyFileFromPath:toPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

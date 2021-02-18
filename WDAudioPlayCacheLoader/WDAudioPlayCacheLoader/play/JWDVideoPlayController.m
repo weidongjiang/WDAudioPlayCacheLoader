@@ -215,10 +215,11 @@ static const NSString *PlayerItemStatusContext;
 
 #pragma WDAudioPlayResourceLoaderDelegate
 - (void)loader:(WDAudioPlayResourceLoader *)loader cacheProgress:(CGFloat)progress {
-    
+    NSLog(@"loader cacheProgress----%f",progress);
 }
 - (void)loader:(WDAudioPlayResourceLoader *)loader failLoadingWithError:(NSError *)error {
-    
+    NSLog(@"loader failLoadingWithError---error-%@",error);
+
 }
 
 
